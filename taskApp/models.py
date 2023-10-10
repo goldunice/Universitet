@@ -25,6 +25,9 @@ class Ustoz(models.Model):
     jins = models.CharField(choices=JINS, max_length=6)
     yosh = models.PositiveSmallIntegerField()
     daraja = models.CharField(max_length=255)
+
+
+
     fan = models.ForeignKey(Fan, on_delete=models.CASCADE)
 
     def __str__(self):
