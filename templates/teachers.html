@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authors</title>
+</head>
+<body>
+<br>
+<hr>
+<br>
+<form method="get">
+    <input type="text" placeholder="search" name="search_word">
+    <button>Search</button>
+</form>
+<br>
+{% for t in teachers %}
+<h2>ID -- {{t.id}}, Ustoz ismi -- {{t.ism}}, yosh -- {{t.yosh}}, Fan -- {{t.fan}}</h2>
+{% endfor %}
+
+</body>
+</html>

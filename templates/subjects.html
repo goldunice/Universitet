@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Subjects</title>
+</head>
+<body>
+<br>
+<hr>
+<br>
+<form method="get">
+    <input type="text" placeholder="search" name="search_word">
+    <button>Search</button>
+</form>
+{% for s in subjects %}
+<h2>ID -- {{s.id}}, Fan nomi -- {{s.nom}}, asosiy -- {{s.asosiy}}</h2>
+{% endfor %}
+
+</body>
+</html>

@@ -16,7 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from taskApp.views import delete_subject, subjects, direction, delete_dir, teachers
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('subjects/', subjects),
+    path('delete_subject/<int:son>/', delete_subject),
+    path('direction/', direction),
+    path('delete_dir/<int:son>', delete_dir),
+    path('teachers/', teachers),
+
 ]
