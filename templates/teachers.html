@@ -17,5 +17,31 @@
 <h2>ID -- {{t.id}}, Ustoz ismi -- {{t.ism}}, yosh -- {{t.yosh}}, Fan -- {{t.fan}}</h2>
 {% endfor %}
 
+<hr>
+<br>
+<form method="post">
+    {% csrf_token %}
+    <label for="ism">Ism: </label>
+    <input type="text" id="ism" name="ism"><br>
+    <label for="jins">Jins: </label>
+    <select name="jins" id="jins">
+        {% for i in jins %}
+        <option value="{{i}}">{{i}}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <label for="yosh">Yosh: </label>
+    <input type="number" name="yosh" id="yosh"><br>
+    <label for="daraja">Daraja: </label>
+    <input type="text" id="daraja" name="daraja"><br>
+    <label for="fan">Fan: </label>
+    <select name="fan" id="fan">
+        {% for fan in fanlar%}
+        <option value="{{fan.id}}">{{fan.nom}}</option>
+        {% endfor %}
+    </select><br>
+    <button>Qo'shish</button>
+</form>
+
 </body>
 </html>

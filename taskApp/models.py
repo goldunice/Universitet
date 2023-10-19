@@ -10,6 +10,10 @@ class Yonalish(models.Model):
     def __str__(self):
         return self.nom
 
+    # class Meta:
+    #     verbose_name = 'Fan'
+    #     verbose_name_plural = 'Fanlar'
+
 
 class Fan(models.Model):
     nom = models.CharField(max_length=255)

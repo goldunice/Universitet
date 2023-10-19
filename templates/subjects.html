@@ -16,5 +16,22 @@
 <h2>ID -- {{s.id}}, Fan nomi -- {{s.nom}}, asosiy -- {{s.asosiy}}</h2>
 {% endfor %}
 
+<hr>
+<br>
+
+<form method="post">
+    {% csrf_token %}
+    <input type="text" placeholder="Fan nomi" name="nom"><br>
+    <label for="yonalish"></label>
+    <select name="yonalish" id="yonalish">
+        {% for yonalish in yonalishlar %}
+        <option value="{{yonalish.id}}">{{yonalish.nom}}</option>
+        {% endfor %}
+    </select><br>
+    <label for="asosiy">Asosiy: </label>
+    <input type="checkbox" id="asosiy" name="asosiy"><br>
+    <button>Qo'shish</button>
+</form>
+
 </body>
 </html>

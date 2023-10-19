@@ -5,11 +5,24 @@
     <title>Direction</title>
 </head>
 <body>
+
+<h1>Yo'nalishlar</h1>
 <br>
 <hr>
 {% for d in direction %}
 <h2>ID -- {{d.id}}, Yo'nalish nomi -- {{d.nom}}, Aktiv -- {{d.aktiv}}</h2>
 {% endfor %}
+
+<hr>
+<br>
+<form method="post">
+    {% csrf_token %}
+    <label for="nom">Yo'nalish nomi: </label>
+    <input type="text" name="nom" id="nom"><br>
+    <label for="aktiv">Aktiv: </label>
+    <input type="checkbox" id="aktiv" name="aktiv"><br>
+    <button>Qo'shish</button>
+</form>
 
 </body>
 </html>
